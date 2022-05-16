@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.firebaseapp.view.fragments.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_gamesFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.firebaseapp.view.fragments.MenuFragment"
+        android:label="games_fragment"
+        tools:layout="@layout/menu_fragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.firebaseapp.view.fragments.ListFragment"
+        android:label="list_fragment"
+        tools:layout="@layout/list_fragment">
+        <argument
+            android:name="mode"
+            app:argType="long"
+            android:defaultValue="0L"/>
+        <action
+            android:id="@+id/action_listFragment_to_movieEditFragment"
+            app:destination="@id/movieEditFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_gameEditFragment"
+            app:destination="@id/gameEditFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_bookEditFragment"
+            app:destination="@id/bookEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieEditFragment"
+        android:name="com.example.firebaseapp.view.fragments.MovieEditFragment"
+        android:label="movie_edit_fragment"
+        tools:layout="@layout/movie_edit_fragment" >
+        <argument
+            android:name="index"
+            app:argType="long"
+            android:defaultValue="-1L"/>
+    </fragment>
+    <fragment
+        android:id="@+id/gameEditFragment"
+        android:name="com.example.firebaseapp.view.fragments.GameEditFragment"
+        android:label="game_edit_fragment"
+        tools:layout="@layout/game_edit_fragment">
+        <argument
+            android:name="index"
+            app:argType="long"
+            android:defaultValue="-1L"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bookEditFragment"
+        android:name="com.example.firebaseapp.view.fragments.BookEditFragment"
+        android:label="book_edit_fragment"
+        tools:layout="@layout/book_edit_fragment">
+        <argument
+            android:name="index"
+            app:argType="long"
+            android:defaultValue="-1L"/>
+    </fragment>
+</navigation>

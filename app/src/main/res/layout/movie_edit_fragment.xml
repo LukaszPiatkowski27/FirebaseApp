@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.MovieEditFragment">
+
+    <TextView
+        android:id="@+id/movie_props_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET MOVIE PROPERTIES"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/enter_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ENTER THE TITLE:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_props_tv"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/movie_title_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_title_tv"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/movie_title_temp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/enter_author_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ENTER THE AUTHOR:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_title_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/movie_author_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_author_tv"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/author_temp"
+        android:layout_marginTop="10dp"
+        android:inputType="textCapWords"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/enter_genre_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ENTER THE GENRE:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_author_input"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/movie_genre_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_genre_tv"
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/genre_temp"
+        android:layout_marginTop="10dp"
+        android:inputType="textCapWords"
+        android:textAlignment="center"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/year_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_genre_input"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ENTER THE YEAR:"
+            android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/movie_year_input"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="YYYY"
+            android:maxLength="4"
+            android:inputType="number"
+            android:textAlignment="center"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/seen_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/year_layout"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="HAVE YOU SEEN THIS MOVIE ALREADY?"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/movie_seen_switch"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttons_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seen_layout"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp">
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:layout_marginEnd="5dp"/>
+        <Button
+            android:id="@+id/remove_btn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="REMOVE"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="#ffcf3030"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttons_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:text="SAVE CHANGES"
+        android:layout_marginTop="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

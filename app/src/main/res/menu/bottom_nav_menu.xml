@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_movies"
+        android:icon="@drawable/ic_baseline_movie_96"
+        android:title="@string/movies" />
+
+    <item
+        android:id="@+id/nav_games"
+        android:icon="@drawable/ic_baseline_videogame_asset_96"
+        android:title="@string/games" />
+
+    <item
+        android:id="@+id/nav_books"
+        android:icon="@drawable/ic_baseline_menu_book_96"
+        android:title="@string/books" />
+</menu>
